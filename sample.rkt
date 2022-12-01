@@ -8,6 +8,7 @@
 #lang racket/base
 
 (require racket/file
+         racket/list
          racket/string)
 
 (module* main #f

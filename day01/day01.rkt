@@ -17,22 +17,16 @@
     (printf "part 2: ~a~n" (part-2 lines))))
 
 (define (part-1 lines)
-  (first (sort (for/fold ([sums (list 0)] #:result sums) ([l lines])
-                 (if (equal? "" l)
-                     (cons 0 sums)
-                     (let* ([sum (first sums)] [sums (cdr sums)])
-                       (cons (+ (string->number l) sum) sums))))
-               >)))
+  (first (sorted-meals lines)))
 
 (define (part-2 lines)
-  (apply +
-         (take (sort (for/fold ([sums (list 0)] #:result sums) ([l lines])
-                       (if (equal? "" l)
-                           (cons 0 sums)
-                           (let* ([sum (first sums)] [sums (cdr sums)])
-                             (cons (+ (string->number l) sum) sums))))
-                     >)
-               3)))
+  (apply + (take (sorted-meals lines) 3)))
+
+(define (sorted-meals lines)
+  (for/fold ([sums (list 0)] #:result (sort sums >)) ([l lines])
+    (if (equal? "" l)
+        (cons 0 sums)
+        (let* ([sum (first sums)] [sums (rest sums)]) (cons (+ (string->number l) sum) sums)))))
 
 (module+ test
   (require rackunit

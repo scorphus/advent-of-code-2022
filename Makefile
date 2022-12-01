@@ -42,6 +42,11 @@ __new-day-%:
 	@-raco aoc -s $$(cat ~/.adventofcode.session) -y 2022 -d $* > input$*.txt
 .PHONY: __new-day-
 
+# run linter
+lint:
+	@for rkt in **/*rkt; do echo $$rkt; raco review $$rkt; done
+.PHONY: test
+
 # run tests
 test:
 	@raco test **/*.rkt

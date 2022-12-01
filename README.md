@@ -1,4 +1,4 @@
-# :christmas_tree: Advent of Code 2022 <!-- [![Build Status][build-badge]][action-link] [![Coverage Status][codecov-badge]][codecov-link] -->
+# :christmas_tree: Advent of Code 2022 [![Build Status][build-badge]][action-link] <!-- [![Coverage Status][codecov-badge]][codecov-link] -->
 
 Solutions to [Advent of Code 2022] in [Racket][racket] ![][racket-logo]
 

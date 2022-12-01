@@ -44,10 +44,10 @@ __new-day-%:
 
 # run tests
 test:
-	@raco test *.rkt
+	@raco test **/*.rkt
 .PHONY: test
 
 # report coverage in html format
 cover:
-	@raco cover *.rkt
+	@raco cover **/*.rkt
 .PHONY: cover

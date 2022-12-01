@@ -14,7 +14,7 @@ no_targets__:
 
 # install dependencies
 setup:
-	@raco pkg install --auto --update-deps
+	@raco pkg install --auto --update-deps --skip-installed
 .PHONY: setup
 
 # create new challenge from sample

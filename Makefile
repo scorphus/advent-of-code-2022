@@ -14,11 +14,7 @@ no_targets__:
 
 # install dependencies
 setup:
-	@-raco pkg install advent-of-code
-	@-raco pkg install cover
-	@-raco pkg install fmt
-	@-raco pkg install review
-	@-raco pkg install test
+	@raco pkg install --auto --update-deps
 .PHONY: setup
 
 # create new challenge from sample

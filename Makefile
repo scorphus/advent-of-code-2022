@@ -45,10 +45,10 @@ lint:
 
 # run tests
 test:
-	@raco test **/*.rkt
+	@raco test -t -x -p advent-of-code-2022
 .PHONY: test
 
 # report coverage in html format
 cover:
-	@raco cover **/*.rkt
+	@raco cover .
 .PHONY: cover

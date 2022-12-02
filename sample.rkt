@@ -9,8 +9,13 @@
 
 #lang racket/base
 
-(require racket/file
+(require racket/date
+         racket/file
+         racket/function
+         racket/hash
          racket/list
+         racket/match
+         racket/stream
          racket/string)
 
 (module* main #f

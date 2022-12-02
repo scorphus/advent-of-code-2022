@@ -5,6 +5,8 @@
 ; https://opensource.org/licenses/BSD-3-Clause
 ; Copyright (c) 2022, Pablo S. Blum de Aguiar <scorphus@gmail.com>
 
+; Day %%DAY%% - https://adventofcode.com/2022/day/%%DAY%%
+
 #lang racket/base
 
 (require racket/file
@@ -12,7 +14,7 @@
          racket/string)
 
 (module* main #f
-  (let ([lines (file->lines "input%%DAY%%.txt")])
+  (let ([lines (file->lines "input.txt")])
     (printf "part 1: ~a~n" (part-1 lines))
     (printf "part 2: ~a~n" (part-2 lines))))
 

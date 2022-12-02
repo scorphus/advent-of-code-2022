@@ -27,15 +27,15 @@ new-day:
 .PHONY: new-day
 
 new-day-%:
-	@$(MAKE) __new-day-$$(printf "%02d" $*)
+	@$(MAKE) __new-day-$$(printf "%d" $*)
 .PHONY: new-day-
 
 __new-day-%:
-	@mkdir -p day$*
-	@cp sample.rkt day$*.rkt
-	@sed -i.tmp s/%%DAY%%/$*/ day$*.rkt
-	@rm day$*.rkt.tmp
-	@-raco aoc -s $$(cat ~/.adventofcode.session) -y 2022 -d $* > input$*.txt
+	@mkdir -p day$$(printf "%02d" $*)
+	@cp sample.rkt solution.rkt
+	@sed -i.tmp s/%%DAY%%/$*/g solution.rkt
+	@rm solution.rkt.tmp
+	@-raco aoc -s $$(cat ~/.adventofcode.session) -y 2022 -d $* > input.txt
 .PHONY: __new-day-
 
 # run linter

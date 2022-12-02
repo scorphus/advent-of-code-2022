@@ -5,6 +5,8 @@
 ; https://opensource.org/licenses/BSD-3-Clause
 ; Copyright (c) 2022, Pablo S. Blum de Aguiar <scorphus@gmail.com>
 
+; Day 1 - https://adventofcode.com/2022/day/1
+
 #lang racket/base
 
 (require racket/file
@@ -12,7 +14,7 @@
          racket/string)
 
 (module* main #f
-  (let ([lines (file->lines "input01.txt")])
+  (let ([lines (file->lines "input.txt")])
     (printf "part 1: ~a~n" (part-1 lines))
     (printf "part 2: ~a~n" (part-2 lines))))
 
@@ -36,7 +38,7 @@
     (list "1000" "2000" "3000" "" "4000" "" "5000" "6000" "" "7000" "8000" "9000" "" "10000"))
 
   (define suite
-    (test-suite "day 01 tests"
+    (test-suite "day 1 tests"
                 (test-equal? "part 1 with sample input" (part-1 sample) 24000)
                 (test-equal? "part 2 with sample input" (part-2 sample) 45000)))
 

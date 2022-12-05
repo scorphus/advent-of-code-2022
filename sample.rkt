@@ -16,7 +16,8 @@
          racket/list
          racket/match
          racket/stream
-         racket/string)
+         racket/string
+         racket/vector)
 
 (module* main #f
   (let ([lines (file->lines "input.txt")])

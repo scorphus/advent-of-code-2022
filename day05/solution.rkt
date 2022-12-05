@@ -47,7 +47,7 @@
 (define (parse-stacks rows (stacks '()))
   (if (equal? "" (second rows))
       (map reverse stacks)
-      (let ([row (string->list (first rows))]) (parse-stacks (rest rows) (parse-row row stacks)))))
+      (parse-stacks (rest rows) (parse-row (string->list (first rows)) stacks))))
 
 (define (parse-row row stacks (new-stacks '()))
   (let*-values ([(crate) (second (take row 3))]

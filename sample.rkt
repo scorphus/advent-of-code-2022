@@ -15,6 +15,7 @@
          racket/hash
          racket/list
          racket/match
+         racket/set
          racket/stream
          racket/string
          racket/vector)

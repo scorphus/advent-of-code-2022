@@ -23,7 +23,7 @@ next-day:
 .PHONY: next-day
 
 new-day:
-	@$(MAKE) new-day-$$(date +%d)
+	@$(MAKE) new-day-$$(date +%d | bc)
 .PHONY: new-day
 
 new-day-%:

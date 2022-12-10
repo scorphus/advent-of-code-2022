@@ -1,4 +1,4 @@
-*.txt
+input.tx*
 compiled
 coverage
 doc
